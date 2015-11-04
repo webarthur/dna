@@ -1,0 +1,32 @@
+{
+  "name": "genoma",
+  "version": "1.0.5",
+  "description": "Extract \"genoma\" from css files to genoma.sass",
+  "main": "index.js",
+  "bin": {
+    "genoma": "./bin/genoma"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/webarthur/genoma.git"
+  },
+  "keywords": [
+    "dna",
+    "css",
+    "sass"
+  ],
+  "author": "Arthur Araújo <webarthur@gmail.com> (http://araujo.cc/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webarthur/genoma/issues"
+  },
+  "dependencies": {
+    "fs": "0.0.2",
+    "glob": "^5.0.15",
+    "path": "^0.12.7",
+    "util": "^0.10.3"
+  }
+}

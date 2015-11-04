@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+var genoma = require('../lib/genoma.js');
+
+(function () {
+
+  var cmd = process.argv[2];
+
+  function _args(n){return process.argv[n]};
+
+  if( cmd=='-d' || cmd=='--decode' ) {
+
+    var data = '../genoma-' + _args(3) + '.json',
+        input = _args(4),
+        output = _args(5);
+
+    genoma.set(data);
+    genoma.decode(input, output);
+  }
+
+  if( cmd=='-h' || cmd=='--help' ) {
+    // message = 'Genoma extracts css DNA to genoma.sass\n'
+    // + 'Classes are like cancer, try a DNA therapy\n';
+
+    var message = '\nUsage: genoma [options] "genoma type" path/input/style.scss path/output/style.scss\n\n'
+                  + 'Example: genoma -d "bootstrap" ./scss/* ./dna \n\n'
+                  + 'If called without options, nothing happens! =/\n\n'
+                  + '  -d, --decode         decode genoma.scss from files'
+                  + '\n'
+                  ;
+    console.log(message);
+  }
+
+}());
