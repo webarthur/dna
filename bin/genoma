@@ -10,7 +10,7 @@ var genoma = require('../lib/genoma.js');
 
   if( cmd=='-d' || cmd=='--decode' ) {
 
-    var data = '../genoma-' + _args(3) + '.json',
+    var data = 'genoma-' + _args(3) + '.json',
         input = _args(4),
         output = _args(5);
 
@@ -29,6 +29,12 @@ var genoma = require('../lib/genoma.js');
                   + '\n'
                   ;
     console.log(message);
+  }
+
+  if( cmd=='-c' || cmd=='--copy' ) {
+
+    var genoma_type = _args(3);
+    genoma.copy(genoma_type);
   }
 
 }());
