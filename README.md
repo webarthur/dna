@@ -1,2 +1,2 @@
-# dna
-Extract DNA from css files to genoma.sass
+# Genoma
+Extract css genoma to genoma.sass
