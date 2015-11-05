@@ -8,6 +8,7 @@ var genoma = require('../lib/genoma.js');
 
   function _args(n){return process.argv[n]};
 
+  // Decode genoma from framework
   if( cmd=='-d' || cmd=='--decode' ) {
 
     var data = 'genoma-' + _args(3) + '.json',
@@ -16,8 +17,18 @@ var genoma = require('../lib/genoma.js');
 
     genoma.set(data);
     genoma.decode(input, output);
+    return;
   }
 
+  // Copy genoma to local directory
+  if( cmd=='-c' || cmd=='--copy' ) {
+
+    var genoma_type = _args(3);
+    genoma.copy(genoma_type);
+    return;
+  }
+
+  // Help
   if( cmd=='-h' || cmd=='--help' ) {
     // message = 'Genoma extracts css DNA to genoma.sass\n'
     // + 'Classes are like cancer, try a DNA therapy\n';
@@ -25,16 +36,20 @@ var genoma = require('../lib/genoma.js');
     var message = '\nUsage: genoma [options] "genoma type" path/input/style.scss path/output/style.scss\n\n'
                   + 'Example: genoma -d "bootstrap" ./scss/* ./dna \n\n'
                   + 'If called without options, nothing happens! =/\n\n'
+                  + '  -c, --copy           copy a genoma json decoded: only bootstrap for now'
                   + '  -d, --decode         decode genoma.scss from files'
+                  + '  -v, --version        show Genoma version'
                   + '\n'
                   ;
     console.log(message);
+    return;
   }
 
-  if( cmd=='-c' || cmd=='--copy' ) {
+  // Show version
+  if( cmd=='-v' || cmd=='--version' ) {
 
-    var genoma_type = _args(3);
-    genoma.copy(genoma_type);
+    console.log('Genoma version '+genoma.VERSION);
+    return;
   }
 
 }());
