@@ -1,6 +1,6 @@
 {
   "name": "genoma",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Extract \"genoma\" css to genoma.sass",
   "main": "index.js",
   "bin": {

@@ -15,7 +15,7 @@ var genoma = require('../lib/genoma.js');
         input = _args(4),
         output = _args(5);
 
-    genoma.set(data);
+    genoma.map(data);
     genoma.decode(input, output);
     return;
   }
