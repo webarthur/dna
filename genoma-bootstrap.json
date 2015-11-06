@@ -39,7 +39,7 @@
       ".btn-group-xs":"[x-small]",
       ".btn-group-vertical":"[vertical]",
       ".btn-group-justified":"[justified]",
-      ".btn-toolbar":"toolbar"
+      ".btn-toolbar":"--toolbar"
     },
     ".caption":"caption",
     ".caret":"caret",
@@ -97,8 +97,15 @@
     ".media":"media",
     ".media-left":"media-left",
     ".media-body":"media-body",
+    ".nav":{
+      "_":"nav",
+      ".nav-tabs":"[tabs]",
+      ".nav-pills":"[pills]"
+    },
     ".navbar":{
-      "_":"navbar",
+      "_":"nav[bar]",
+      ".navbar-header":"--header",
+      ".navbar-collapse":"[collapse]",
       ".navbar-default":"[default]",
       ".navbar-fixed-top":"[fixed-top]",
       ".navbar-fixed-bottom":"[fixed-bottom]",
@@ -109,7 +116,6 @@
       ".navbar-left":"--[navbar-left]",
       ".navbar-text":"--[navbar-text]"
     },
-    ".navbar-header":"navbar-header",
     ".pagination":{
       "_":"[pagination]",
       ".pagination-lg":"[large]",
@@ -192,8 +198,6 @@
       ".lead":"[lead]",
       ".media-object":"[media-object]",
       ".media-heading":"[media-heading]",
-      ".nav-pills":"[pills]",
-      ".nav-tabs":"[tabs]",
       ".navbar-brand":"[brand]",
       ".pager":"[pager]",
       ".previous":"[previous]",
