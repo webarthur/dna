@@ -90,6 +90,11 @@
       ".img-rounded":"[rounded]",
       ".img-thumbnail":"[thumbnail]"
     },
+    ".input":{
+      ".input-lg":"[large]",
+      ".input-sm":"[small]",
+      ".input-xs":"[x-small]"
+    },
     ".input-group":"group[inputs]",
     ".input-group-addon":"addon",
     ".input-group-btn":"group[input-buttons]",
@@ -98,23 +103,31 @@
     ".media-left":"media-left",
     ".media-body":"media-body",
     ".nav":{
-      "_":"nav",
+      "_":"[nav],nav",
       ".nav-tabs":"[tabs]",
-      ".nav-pills":"[pills]"
+      ".nav-pills":"[pills]",
+      ".nav-justified":"[justified]",
+      ".nav-stacked":"[stacked]"
     },
     ".navbar":{
-      "_":"nav[bar]",
+      "_":"navbar",
+      ".navbar-brand":"--[brand]",
       ".navbar-header":"--header",
       ".navbar-collapse":"[collapse]",
       ".navbar-default":"[default]",
       ".navbar-fixed-top":"[fixed-top]",
       ".navbar-fixed-bottom":"[fixed-bottom]",
+      ".navbar-form":" [navbar~=form]",
       ".navbar-full":"[full]",
       ".navbar-inverse":"[inverse]",
       ".navbar-static-top":"[static-top]",
-      ".navbar-btn":"--[navbar-btn]",
-      ".navbar-left":"--[navbar-left]",
-      ".navbar-text":"--[navbar-text]"
+      ".navbar-btn":"--[navbar-button]",
+      ".navbar-nav":" [nav]",
+      ".navbar-link":"~[link]",
+      ".navbar-left":"~[left]",
+      ".navbar-right":"~[right]",
+      ".navbar-text":"~[text]",
+      ".navbar-toggle":"~[toggle]"
     },
     ".pagination":{
       "_":"[pagination]",
@@ -152,10 +165,6 @@
       ".table-condensed":"[condensed]",
       ".table-responsive":"--[table-responsive]"
     },
-    "ul":{
-      ".nav-justified":"[justified]",
-      ".nav-stacked":"[stacked]"
-    },
     ".well":{
       "_":"well",
       ".well-lg":"[large]",
@@ -191,14 +200,10 @@
       ".hidden-lg":"[hidden-lg]",
       ".help-block":"[help-block]",
       ".initialism":"[initialism]",
-      ".input-lg":"[large]",
-      ".input-sm":"[small]",
-      ".input-xs":"[x-small]",
       ".invisible":"[invisible]",
       ".lead":"[lead]",
       ".media-object":"[media-object]",
       ".media-heading":"[media-heading]",
-      ".navbar-brand":"[brand]",
       ".pager":"[pager]",
       ".previous":"[previous]",
       ".next":"[next]",
